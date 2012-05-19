@@ -13,7 +13,7 @@ def convert_to_csv():
         year = cells.pop(0)
         months = cells[:12]
         for idx, month in enumerate(months):
-            out.append(['%s-%0d-01' % (year, idx+1), month])
+            out.append(['%s-%02d-01' % (year, idx+1), month])
 
     writer = csv.writer(open(outfo, 'w'))
     writer.writerow(['Date', 'Value'])

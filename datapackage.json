@@ -1,44 +1,34 @@
 {
-  "author": "", 
-  "author_email": "", 
-  "download_url": "ftp://ftp.bls.gov/pub/special.requests/cpi/cpiai.txt", 
-  "extras": {}, 
-  "id": "3fe04813-17c0-483c-b6fa-6504daf108eb", 
-  "license": "Other (Public Domain)", 
-  "maintainer": "", 
-  "maintainer_email": "", 
-  "name": "us-consumer-price-index", 
-  "notes": "Main Consumer Price Index (there are many) from U.S. Department Of Labor Bureau of Labor Statistics for \"All Urban Consumers - (CPI-U)\". U.S. city average for all items and 1982-84=100.", 
-  "relationships": [], 
-  "resources": [
+  "name": "us-cpi", 
+  "homepage": "http://www.bls.gov/cpi/",
+  "last_modified": "2012-05-19T15:33:55.064655", 
+  "source": "US Bureau of Labor Statistics",
+  "license": [
     {
-      "cache_last_updated": null, 
-      "cache_url": null, 
-      "created": "2012-05-19T15:33:52.163476", 
-      "description": "", 
-      "format": "txt", 
-      "hash": "9349d54d45b384896cb98a15e81e1d938c5e76ac", 
-      "id": "dd36dac9-7064-4be1-b3b4-fb6a866cab63", 
-      "last_modified": "2012-05-19T15:33:55.064655", 
-      "mimetype": "text/plain", 
-      "mimetype_inner": "", 
-      "name": "All Urban Consumer (CPI-U) - source txt file", 
-      "package_id": "3fe04813-17c0-483c-b6fa-6504daf108eb", 
-      "position": 0, 
-      "resource_group_id": "3dea79cb-6a7e-4218-bf4f-90767aa3fb07", 
-      "resource_type": "file", 
-      "size": "15157", 
-      "tracking_summary": {
-        "recent": 0, 
-        "total": 0
-      }, 
-      "url": "ftp://ftp.bls.gov/pub/special.requests/cpi/cpiai.txt", 
-      "webstore_last_updated": "2012-05-19T15:33:58.135171", 
-      "webstore_url": "http://thedatahub.org/api/data/dd36dac9-7064-4be1-b3b4-fb6a866cab63/"
+      "title": "Other (Public Domain)"
     }
-  ], 
-  "tags": [], 
-  "title": "US Consumer Price Index (CPI)", 
-  "url": "", 
-  "version": ""
+  ],
+  "description": "Main Consumer Price Index (there are many) from U.S. Department Of Labor Bureau of Labor Statistics for \"All Urban Consumers - (CPI-U)\". U.S. city average for all items and 1982-84=100.", 
+  "keywords": [], 
+  "title": "US Consumer Price Index (CPI)",
+  "files": [
+    {
+      "path": "data/cpiai.csv",
+      "format": "csv", 
+      "last_modified": "2012-05-19T15:33:55.064655", 
+      "mimetype": "text/csv", 
+      "size": "15157", 
+      "url": "ftp://ftp.bls.gov/pub/special.requests/cpi/cpiai.txt", 
+      "fields": [
+        {
+          "id": "Date",
+          "type": "date"
+        },
+        {
+          "id": "Value",
+          "type": "float"
+        }
+      ]
+    }
+  ]
 }

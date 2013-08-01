@@ -43,5 +43,27 @@
         ]
       }
     }
+  ],
+  "views": [
+    {
+      "id": "graph",
+      "label": "Inflation",
+      "type": "Graph",
+      "state": {
+        "group": "Date",
+        "graphType": "columns",
+        "series": [ "Inflation" ]
+      }
+    },
+    {
+      "id": "graph-index",
+      "label": "Index",
+      "type": "Graph",
+      "state": {
+        "group": "Date",
+        "graphType": "lines",
+        "series": [ "Index" ]
+      }
+    }
   ]
 }

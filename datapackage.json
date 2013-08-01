@@ -1,36 +1,42 @@
 {
-  "metadata": {
-    "name": "us-cpi", 
-    "homepage": "http://www.bls.gov/cpi/",
-    "last_modified": "2012-05-19T15:33:55.064655", 
-    "source": "US Bureau of Labor Statistics",
-    "license": [
-      {
-        "title": "Other (Public Domain)"
-      }
-    ],
-    "description": "Main Consumer Price Index (there are many) from U.S. Department Of Labor Bureau of Labor Statistics for \"All Urban Consumers - (CPI-U)\". U.S. city average for all items and 1982-84=100.", 
-    "keywords": [], 
-    "title": "US Consumer Price Index (CPI)"
-  },
-  "files": [
+  "name": "cpi-us", 
+  "title": "US Consumer Price Index (CPI)",
+  "sources": [{
+    "name": "US Bureau of Labor Statistics",
+    "web": "http://www.bls.gov/cpi/"
+  }],
+ "licenses": [
+    {
+      "id": "odc-pddl",
+      "name": "Public Domain Dedication and License",
+      "version": "1.0",
+      "url": "http://opendatacommons.org/licenses/pddl/1.0/"
+    }
+  ],
+  "keywords": ["Indicator"], 
+  "resources": [
     {
       "path": "data/cpiai.csv",
       "format": "csv", 
-      "last_modified": "2012-05-19T15:33:55.064655", 
       "mimetype": "text/csv", 
       "size": "15157", 
-      "url": "ftp://ftp.bls.gov/pub/special.requests/cpi/cpiai.txt", 
-      "fields": [
-        {
-          "id": "Date",
-          "type": "date"
-        },
-        {
-          "id": "Value",
-          "type": "float"
-        }
-      ]
+      "sources": [{
+        "web": "ftp://ftp.bls.gov/pub/special.requests/cpi/cpiai.txt"
+      }],
+      "schema": {
+        "fields": [
+          {
+            "id": "Date",
+            "description": "Date (strictly the year and month)",
+            "type": "date"
+          },
+          {
+            "id": "Value",
+            "description": "Consumer Price Index. Values are U.S. city averages for all items and 1982-84=100.",
+            "type": "number"
+          }
+        ]
+      }
     }
   ]
 }

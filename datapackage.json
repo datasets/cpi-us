@@ -1,6 +1,6 @@
 {
   "name": "cpi-us", 
-  "title": "US Consumer Price Index (CPI)",
+  "title": "US Consumer Price Index and Inflation (CPI)",
   "sources": [{
     "name": "US Bureau of Labor Statistics",
     "web": "http://www.bls.gov/cpi/"
@@ -31,8 +31,13 @@
             "type": "date"
           },
           {
-            "id": "Value",
-            "description": "Consumer Price Index. Values are U.S. city averages for all items and 1982-84=100.",
+            "id": "Index",
+            "description": "Monthly Consumer Price Index. Values are U.S. city averages for all items and 1982-84=100.",
+            "type": "number"
+          },
+          {
+            "id": "Inflation",
+            "description": "Monthly Consumer Price Inflation. Values are for U.S. city averages for all items.",
             "type": "number"
           }
         ]

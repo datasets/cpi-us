@@ -1,6 +1,11 @@
 import csv
 outfo = 'data/cpiai.csv'
 
+source_url = 'ftp://ftp.bls.gov/pub/special.requests/cpi/cpiai.txt'
+
+def download():
+    urllib.urlretrieve(source_url, 'data/cpiai.txt')
+
 def convert_to_csv():
     fo = open('data/cpiai.txt')
     lines = fo.read().split('\n')
@@ -13,10 +18,20 @@ def convert_to_csv():
         year = cells.pop(0)
         months = cells[:12]
         for idx, month in enumerate(months):
-            out.append(['%s-%02d-01' % (year, idx+1), month])
+            out.append(['%s-%02d-01' % (year, idx+1), float(month)])
+    for idx, row in enumerate(out[1:]):
+        thismonth = row[1]
+        lastmonth = out[idx][1]
+        # really this isn't quite right since price index is average of that
+        # month and i want
+        # inflation this month = price index start of month - index at end of month
+        inflation = round(100*(thismonth - lastmonth) / lastmonth, 2)
+        row.append(inflation)
+    # no value for inflation in first month
+    row[0].append('')
 
     writer = csv.writer(open(outfo, 'w'))
-    writer.writerow(['Date', 'Value'])
+    writer.writerow(['Date', 'Index', 'Inflation'])
     writer.writerows(out)
 
 def upload():
@@ -38,8 +53,5 @@ def upload():
     client.upload(outfo)
 
 if __name__ == '__main__':
-    import logging
-    logging.basicConfig(level=logging.DEBUG)
     convert_to_csv()
-    upload()
 

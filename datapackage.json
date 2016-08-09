@@ -26,17 +26,17 @@
       "schema": {
         "fields": [
           {
-            "id": "Date",
+            "name": "Date",
             "description": "Date (strictly the year and month)",
             "type": "date"
           },
           {
-            "id": "Index",
+            "name": "Index",
             "description": "Monthly Consumer Price Index. Values are U.S. city averages for all items and 1982-84=100.",
             "type": "number"
           },
           {
-            "id": "Inflation",
+            "name": "Inflation",
             "description": "Monthly Consumer Price Inflation. Values are for U.S. city averages for all items.",
             "type": "number"
           }

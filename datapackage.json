@@ -1,34 +1,43 @@
 {
-  "name": "cpi-us", 
+  "name": "cpi-us",
   "title": "US Consumer Price Index and Inflation (CPI)",
-  "sources": [{
-    "name": "US Bureau of Labor Statistics",
-    "web": "http://www.bls.gov/cpi/"
-  }],
- "licenses": [
+  "sources": [
+    {
+      "name": "US Bureau of Labor Statistics",
+      "web": "http://www.bls.gov/cpi/",
+      "title": "US Bureau of Labor Statistics"
+    }
+  ],
+  "licenses": [
     {
       "id": "odc-pddl",
-      "name": "Public Domain Dedication and License",
+      "name": "public_domain_dedication_and_license",
       "version": "1.0",
       "url": "http://opendatacommons.org/licenses/pddl/1.0/"
     }
   ],
-  "keywords": ["Indicator"], 
+  "keywords": [
+    "Indicator"
+  ],
   "resources": [
     {
       "path": "data/cpiai.csv",
-      "format": "csv", 
-      "mimetype": "text/csv", 
-      "size": "15157", 
-      "sources": [{
-        "web": "ftp://ftp.bls.gov/pub/special.requests/cpi/cpiai.txt"
-      }],
+      "format": "csv",
+      "mimetype": "text/csv",
+      "size": "15157",
+      "sources": [
+        {
+          "web": "ftp://ftp.bls.gov/pub/special.requests/cpi/cpiai.txt",
+          "title": "unkown"
+        }
+      ],
       "schema": {
         "fields": [
           {
             "name": "Date",
             "description": "Date (strictly the year and month)",
-            "type": "date"
+            "type": "date",
+            "format": "any"
           },
           {
             "name": "Index",
@@ -41,7 +50,8 @@
             "type": "number"
           }
         ]
-      }
+      },
+      "name": "cpiai"
     }
   ],
   "views": [

@@ -46,23 +46,27 @@
   ],
   "views": [
     {
-      "id": "graph",
-      "label": "Inflation",
-      "type": "Graph",
-      "state": {
+      "name": "graph",
+      "title": "Monthly Consumer Price Inflation",
+      "specType": "simple",
+      "spec": {
+        "type": "column",
         "group": "Date",
-        "graphType": "columns",
-        "series": [ "Inflation" ]
+        "series": [
+          "Inflation"
+        ]
       }
     },
     {
-      "id": "graph-index",
-      "label": "Index",
-      "type": "Graph",
-      "state": {
+      "name": "graph",
+      "title": "Monthly Consumer Price Index",
+      "specType": "simple",
+      "spec": {
+        "type": "line",
         "group": "Date",
-        "graphType": "lines",
-        "series": [ "Index" ]
+        "series": [
+          "Index"
+        ]
       }
     }
   ]

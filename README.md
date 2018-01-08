@@ -7,3 +7,6 @@ them (albeit the most standard and with the longest set of data).
 
 Data is sourced from <ftp://ftp.bls.gov/pub/special.requests/cpi/cpiai.txt> and normalized into a CSV.
 
+## License
+
+This Data Package is made available under the Public Domain Dedication and License v1.0 whose full text can be found at: http://www.opendatacommons.org/licenses/pddl/1.0/

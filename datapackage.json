@@ -4,16 +4,15 @@
   "sources": [
     {
       "name": "US Bureau of Labor Statistics",
-      "web": "http://www.bls.gov/cpi/",
+      "path": "http://www.bls.gov/cpi/",
       "title": "US Bureau of Labor Statistics"
     }
   ],
   "licenses": [
     {
-      "id": "odc-pddl",
-      "name": "public_domain_dedication_and_license",
-      "version": "1.0",
-      "url": "http://opendatacommons.org/licenses/pddl/1.0/"
+      "name": "ODC-PDDL-1.0",
+      "path": "http://opendatacommons.org/licenses/pddl/",
+      "title": "Open Data Commons Public Domain Dedication and License v1.0"
     }
   ],
   "keywords": [
@@ -27,7 +26,7 @@
       "size": "15157",
       "sources": [
         {
-          "web": "ftp://ftp.bls.gov/pub/special.requests/cpi/cpiai.txt",
+          "path": "ftp://ftp.bls.gov/pub/special.requests/cpi/cpiai.txt",
           "title": "unkown"
         }
       ],

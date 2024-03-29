@@ -5,7 +5,7 @@ them (albeit the most standard and with the longest set of data).
 
 ## Data
 
-Data is sourced from <ftp://ftp.bls.gov/pub/special.requests/cpi/cpiai.txt> and normalized into a CSV.
+Data is sourced from [bls.gov](ftp://ftp.bls.gov/pub/special.requests/cpi/cpiai.txt) and normalized into a CSV
 
 ## License
 

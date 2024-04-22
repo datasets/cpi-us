@@ -58,6 +58,7 @@
       "name": "graph",
       "title": "Monthly Consumer Price Inflation",
       "specType": "simple",
+      "resources": [ "cpiai" ],
       "spec": {
         "type": "column",
         "group": "Date",
@@ -70,6 +71,7 @@
       "name": "graph",
       "title": "Monthly Consumer Price Index",
       "specType": "simple",
+      "resources": [ "cpiai" ],
       "spec": {
         "type": "line",
         "group": "Date",

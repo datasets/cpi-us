@@ -7,7 +7,7 @@ them (albeit the most standard and with the longest set of data).
 
 ## Data
 
-Data is sourced from [bls.gov](ftp://ftp.bls.gov/pub/special.requests/cpi/cpiai.txt) and normalized into a CSV
+Data is sourced from [bls.gov](https://api.bls.gov/publicAPI/v2/timeseries/data/) and combined with previous data from 2014 which is now outdated and requires an API for this case.
 
 ## License
 

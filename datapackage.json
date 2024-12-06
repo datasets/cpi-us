@@ -26,7 +26,7 @@
       "size": "15157",
       "sources": [
         {
-          "path": "ftp://ftp.bls.gov/pub/special.requests/cpi/cpiai.txt",
+          "path": "https://api.bls.gov/publicAPI/v2/timeseries/data/",
           "title": "unkown"
         }
       ],

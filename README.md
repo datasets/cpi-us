@@ -5,9 +5,19 @@ Of Labor Bureau of Labor Statistics. This is a monthly time series from January 
 1982-84=100. Note that there are many price indices and this is only one of
 them (albeit the most standard and with the longest set of data).
 
+## Preparation
+
+Run the following script to get the final data at `data/` folder:
+```
+python scripts/process.py
+```
+
 ## Data
 
-Data is sourced from [bls.gov](ftp://ftp.bls.gov/pub/special.requests/cpi/cpiai.txt) and normalized into a CSV
+Data is sourced from [bls.gov](https://api.bls.gov/publicAPI/v2/timeseries/data/) and combined with previous data from 2014 which is now outdated and requires an API for this case.
+
+## Automation
+Up-to-date (auto-updates every month) cpi-us dataset could be found on the datahub.io: https://datahub.io/core/cpi-us
 
 ## License
 

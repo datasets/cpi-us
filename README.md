@@ -9,6 +9,10 @@ them (albeit the most standard and with the longest set of data).
 
 Run the following script to get the final data at `data/` folder:
 ```
+# Install libraries
+pip install -r scripts?requirements.txt
+
+# Run the script
 python scripts/process.py
 ```
 

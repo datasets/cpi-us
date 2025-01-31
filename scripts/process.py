@@ -47,7 +47,7 @@ def get_cpi_data():
         # Calculate the monthly inflation rate
         df["Inflation"] = df["CPI"].pct_change() * 100
         df["Inflation"] = df["Inflation"].round(2)
-
+        df.rename(columns={'CPI':'Index'}, inplace=True)
         return df
     else:
         print(f"Error: {json_data.get('message', 'Unknown error')}")

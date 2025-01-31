@@ -41,13 +41,12 @@ def get_cpi_data():
                     date = datetime(year, month, 1)
                     cpi_data.append([date, value])
 
-        df = pd.DataFrame(cpi_data, columns=["Date", "CPI"])
+        df = pd.DataFrame(cpi_data, columns=["Date", "Index"])
         df = df.sort_values(by="Date").reset_index(drop=True)
 
         # Calculate the monthly inflation rate
-        df["Inflation"] = df["CPI"].pct_change() * 100
+        df["Inflation"] = df["Index"].pct_change() * 100
         df["Inflation"] = df["Inflation"].round(2)
-        df.rename(columns={'CPI':'Index'}, inplace=True)
         return df
     else:
         print(f"Error: {json_data.get('message', 'Unknown error')}")
@@ -70,7 +69,6 @@ def process():
         # Sort by Date to ensure chronological order and fill NaN values with empty strings
         merged_df = merged_df.sort_values(by='Date').reset_index(drop=True)
         merged_df = merged_df.fillna('')
-        merged_df.drop('CPI', axis=1, inplace=True)
         # Save the final merged DataFrame to output_path
         merged_df.to_csv(output_path, index=False)
         print("Data updated successfully!")

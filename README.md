@@ -22,6 +22,7 @@ Data is sourced from [bls.gov](https://api.bls.gov/publicAPI/v2/timeseries/data/
 
 ## Automation
 Up-to-date (auto-updates every month) cpi-us dataset could be found on the datahub.io: https://datahub.io/core/cpi-us
+Automated using Github Actions
 
 ## License
 

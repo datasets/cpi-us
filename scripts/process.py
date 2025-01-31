@@ -62,7 +62,7 @@ def process():
     if new_data is not None and not new_data.empty:
         # Load the archived CPI data
         archive_df = pd.read_csv(archive_path, parse_dates=['Date'])
-        archive_df.columns = ['Date', 'CPI', 'Inflation']
+        archive_df.columns = ['Date', 'Index', 'Inflation']
 
         # Combine the archived data with the modified new data
         merged_df = pd.concat([archive_df, new_data], ignore_index=True)

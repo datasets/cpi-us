@@ -70,7 +70,7 @@ def process():
         # Sort by Date to ensure chronological order and fill NaN values with empty strings
         merged_df = merged_df.sort_values(by='Date').reset_index(drop=True)
         merged_df = merged_df.fillna('')
-
+        merged_df.drop('CPI', axis=1, inplace=True)
         # Save the final merged DataFrame to output_path
         merged_df.to_csv(output_path, index=False)
         print("Data updated successfully!")

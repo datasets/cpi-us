@@ -35,11 +35,12 @@ def get_cpi_data():
             for item in series["data"]:
                 year = int(item["year"])
                 period = item["period"]
-                value = float(item["value"])
-                if period.startswith('M'):
-                    month = int(period[1:])
-                    date = datetime(year, month, 1)
-                    cpi_data.append([date, value])
+                raw = item["value"]
+                if not period.startswith('M') or raw == '-':
+                    continue
+                month = int(period[1:])
+                date = datetime(year, month, 1)
+                cpi_data.append([date, float(raw)])
 
         df = pd.DataFrame(cpi_data, columns=["Date", "Index"])
         df = df.sort_values(by="Date").reset_index(drop=True)

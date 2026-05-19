@@ -1,10 +1,11 @@
 {
   "name": "cpi-us",
   "title": "US Consumer Price Index and Inflation (CPI)",
+  "description": "Monthly US Consumer Price Index for All Urban Consumers (CPI-U), series CUUR0000SA0, from the US Bureau of Labor Statistics. Covers January 1913 to present. Values are U.S. city averages for all items, base period 1982–84=100. Includes a derived month-on-month inflation rate.",
   "sources": [
     {
       "name": "US Bureau of Labor Statistics",
-      "path": "http://www.bls.gov/cpi/",
+      "path": "https://www.bls.gov/cpi/",
       "title": "US Bureau of Labor Statistics"
     }
   ],
@@ -23,20 +24,21 @@
       "path": "data/cpiai.csv",
       "format": "csv",
       "mimetype": "text/csv",
-      "size": "15157",
+      "description": "Monthly CPI-U index values and derived month-on-month inflation rates for the US city average (all items), from January 1913 to the most recent available month. The first row (1913-01-01) has an empty Inflation value because percent-change calculation requires a prior month.",
       "sources": [
         {
+          "name": "BLS Public API v2",
           "path": "https://api.bls.gov/publicAPI/v2/timeseries/data/",
-          "title": "unkown"
+          "title": "BLS Public API v2"
         }
       ],
       "schema": {
         "fields": [
           {
             "name": "Date",
-            "description": "Date (strictly the year and month)",
+            "description": "Date of the observation in YYYY-MM-DD format, always the first day of the month.",
             "type": "date",
-            "format": "any"
+            "format": "default"
           },
           {
             "name": "Index",

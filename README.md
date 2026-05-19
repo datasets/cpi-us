@@ -10,7 +10,7 @@ them (albeit the most standard and with the longest set of data).
 Run the following script to get the final data at `data/` folder:
 ```
 # Install libraries
-pip install -r scripts?requirements.txt
+pip install -r scripts/requirements.txt
 
 # Run the script
 python scripts/process.py
@@ -19,6 +19,11 @@ python scripts/process.py
 ## Data
 
 Data is sourced from [bls.gov](https://api.bls.gov/publicAPI/v2/timeseries/data/) and combined with previous data from 2014 which is now outdated and requires an API for this case.
+
+## Data notes
+
+- All `Date` values are formatted as `YYYY-MM-DD` and are always the first day of the month (e.g. `1913-01-01` represents January 1913).
+- The `Inflation` field is empty for the first row (1913-01-01) because month-on-month percent change requires a prior month value.
 
 ## Automation
 Up-to-date (auto-updates every month) cpi-us dataset could be found on the datahub.io: https://datahub.io/core/cpi-us
